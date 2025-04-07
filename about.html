@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <title>About Mallanna Bilebhavi</title>
+  <style>
+  :root {
+    --bg-light: #ffffff;
+    --bg-dark: #0f172a;
+    --text-light: #1e293b;
+    --text-dark: #f1f5f9;
+    --primary: #6366f1;
+    --accent: #14b8a6;
+  }
+
+  [data-theme="dark"] {
+    --bg-light: var(--bg-dark);
+    --text-light: var(--text-dark);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  body {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  main {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    background-color: rgba(100, 116, 139, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 100px;
+    margin: 0 auto 2rem;
+    display: block;
+    border: 4px solid var(--primary);
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    background-color: rgba(100, 116, 139, 0.05);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+  }
+
+  strong {
+    color: var(--primary);
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--primary);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  h1 {
+  text-align: center;
+  margin: 0 auto;
+}
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.back-home-btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  margin: 1rem 0;
+}
+
+.back-home-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+  transform: translateY(-2px);
+}
+.download-resume-btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  margin: 1rem 0;
+}
+
+.download-resume-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+  transform: translateY(-2px);
+}
+
+
+</style>
+</head>
+
+<body>
+    <!-- Live Background -->
+<div id="particles-js"></div>
+
+  <header>
+    <h1>About Mallanna Bilebhavi</h1>
+  </header>
+  <button class="theme-toggle" onclick="toggleTheme()">🌗 Theme</button>
+  <div style="text-align: center;">
+  <main>
+    <img src="1.png" alt="Mallanna Bilebhavi" class="profile-pic" />
+    <div class="info-grid">
+        <div><strong>College:</strong> BLDEA’s Dr. P. G. Halakatti College of Engineering and Technology, Vijayapura</div>
+        <div><strong>Age:</strong> 22</div>
+        <div><strong>City:</strong> Vijayapura, Karnataka</div>
+        <div><strong>Email:</strong> bmr.manoj7@gmail.com</div>
+        <div><strong>Phone:</strong> +91 9019998403</div>
+        <div><strong>Freelance:</strong> Available</div>
+      </div>
+    <p>I have a strong interest in full-stack web development, with experience in building responsive frontends and efficient backends. My journey through computer science has been filled with exciting projects, problem-solving, and continuous learning.</p>
+  
+    <p>Outside of coding, I enjoy making new friends, listening to music, and dreaming about traveling the world. I believe in blending creativity with logic to build digital experiences that truly matter.</p>
+    <a href="Mallanna's Resume.pdf" download class="download-resume-btn">⬇ Download Resume</a><br>
+    <a href="index.html" class="back-home-btn">← Back to Home</a>
+
+  </main>
+  
+  <script>
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+  
+    // Load saved theme
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+    });
+  </script>
+  <!-- Particles.js CDN -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- Particles Config -->
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 80, density: { enable: true, value_area: 800 } },
+      color: { value: "#7c3aed" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3, random: true },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: "#2563eb",
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 3,
+        direction: "none",
+        out_mode: "out"
+      }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "grab" },
+        onclick: { enable: true, mode: "push" }
+      },
+      modes: {
+        grab: { distance: 140, line_linked: { opacity: 1 } },
+        push: { particles_nb: 4 }
+      }
+    },
+    retina_detect: true
+  });
+</script>
+
+
+  <footer>
+    © 2025 Mallanna Bilebhavi
+  </footer>
+</body>
+
+</html>
